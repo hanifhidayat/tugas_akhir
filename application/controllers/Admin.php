@@ -2,7 +2,7 @@
 /**
  * summary
  */
-class Warga extends CI_Controller
+class Admin extends CI_Controller
 {
 	private $username = array();
     public function __construct()
@@ -26,8 +26,8 @@ class Warga extends CI_Controller
 	}
 
     public function index() {
-    	$this->load->model('anak_model');
-    	$data['warga_list'] = $this->warga_model->getDataWargaSemua();
+    	$this->load->model('admin_model');
+    	$data['admin_list'] = $this->admin_model->getDataAdminSemua();
     	$this->load->view('navbar', $this->username);
     	$this->load->view('warga', $data);
     }
