@@ -1,3 +1,9 @@
+#########################################
+web based rt system with codeigniter
+#########################################
+
+facilitate rt to access citizen data quickly
+
 ###################
 What is CodeIgniter
 ###################

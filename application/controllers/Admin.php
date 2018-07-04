@@ -29,7 +29,7 @@ class Admin extends CI_Controller
     	$this->load->model('admin_model');
     	$data['admin_list'] = $this->admin_model->getDataAdminSemua();
     	$this->load->view('navbar', $this->username);
-    	$this->load->view('warga', $data);
+    	$this->load->view('admin', $data);
     }
 }
 ?>
