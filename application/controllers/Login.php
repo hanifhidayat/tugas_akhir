@@ -3,13 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function __construct()
-	{
-		parent::__construct();
-	}
 	public function index()
 	{
-		$this->load->view('login_view');
+		$this->load->view('login_view');		
 	}
 
 	public function cekLogin(){
@@ -19,7 +15,7 @@ class Login extends CI_Controller {
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('login_view');
 		} else {
-			redirect('welcome','refresh');
+			redirect('barang','refresh');
 		}
 	}
 
@@ -32,6 +28,7 @@ class Login extends CI_Controller {
 			foreach ($result as $value) {
 				$session = array(
 						'id_user' =>$value->id_user,
+						'nama_user' =>$value->nama_user, 
 						'username'=>$value->username,
 						'level' =>$value->level
 					);
@@ -53,4 +50,6 @@ class Login extends CI_Controller {
 
 }
 
- ?>
+
+/* End of file login.php */
+/* Location: ./application/controllers/login.php */
