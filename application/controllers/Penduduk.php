@@ -1,12 +1,7 @@
 <?php 
-/**
- * summary
- */
+
 class Penduduk extends CI_Controller
 {
-    /**
-     * summary
-     */
 
     private $data_user = array();
     public function __construct()
@@ -20,13 +15,15 @@ class Penduduk extends CI_Controller
             $this->data_user['username'] = $data['username'];
             $this->data_user['nama_user'] = $data['nama_user'];
             $this->data_user['level'] = $data['level'];
+			
             if ($this->data_user['level'] != "admin") {
                 redirect('false','refresh');
             }
-        } else {
+			
+        	} else {
             redirect('login','refresh');
-        }
-    }
+        	}
+  	  }
 
     public function index() {
     	$this->load->model('Penduduk_model');
